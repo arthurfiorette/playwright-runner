@@ -1,0 +1,14 @@
+
+# drop in folder
+/drop/*
+!/drop/.gitkeep
+!/drop/template.js
+
+# built code
+/dist
+
+# node stuff
+node_modules
+
+# OS stuff
+.DS_Store
