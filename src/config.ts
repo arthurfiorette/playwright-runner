@@ -19,10 +19,3 @@ export function readConfig(path = './config.jsonc'): string {
 export function parseConfig(text: string): Configuration {
   return json5.parse(text) as Configuration;
 }
-
-export function interpretConfig(config: Configuration): void {
-  // Add all (non existent) environment variables to process.env
-  for (const key in config.env) {
-    process.env[key] ??= String(config.env[key]);
-  }
-}

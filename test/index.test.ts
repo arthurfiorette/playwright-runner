@@ -1,15 +1,14 @@
+import 'dotenv/config';
 import path from 'node:path';
 import type { Browser, BrowserContext } from 'playwright';
 import { createBrowser, createTestContext } from '../src/browser-config';
-import { interpretConfig, parseConfig, readConfig } from '../src/config';
+import { parseConfig, readConfig } from '../src/config';
 import { getTestFiles, TestFile } from '../src/test-reader';
 
 const rawConfig = readConfig();
 const config = parseConfig(rawConfig);
 let testContext!: BrowserContext;
 let browser!: Browser;
-
-interpretConfig(config);
 
 // Before all tests, and only before, create a browser and a test context
 beforeAll(async () => {

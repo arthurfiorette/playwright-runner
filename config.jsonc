@@ -14,8 +14,5 @@
     // Tempo em milisegundos para esperar o teste finalizar.
     // Passando disso, o teste irá terminar com um erro
     "timeout": 120000
-  },
-  "env": {
-    "GPI_URL": "https://gpi01.cloud.el.com.br/ServerExec/acessoBase"
   }
 }
