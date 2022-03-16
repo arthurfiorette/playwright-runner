@@ -12,7 +12,8 @@
     "dev": "yarn build && yarn start",
     "build": "tsc -p tsconfig.build.json",
     "format": "prettier --write .",
-    "test": "jest ./test/index.test.ts"
+    "test": "jest ./test/index.test.ts",
+    "postinstall": "playwright install"
   },
   "dependencies": {
     "dotenv": "^16.0.0",
